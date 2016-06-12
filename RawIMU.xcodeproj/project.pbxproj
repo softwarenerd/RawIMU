@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D311302C1D05EC6C00FB8AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D311302B1D05EC6C00FB8AC2 /* main.m */; };
+		D311302F1D05EC6C00FB8AC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D311302E1D05EC6C00FB8AC2 /* AppDelegate.m */; };
+		D31130321D05EC6C00FB8AC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31130311D05EC6C00FB8AC2 /* ViewController.m */; };
+		D31130351D05EC6C00FB8AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31130331D05EC6C00FB8AC2 /* Main.storyboard */; };
+		D31130371D05EC6C00FB8AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31130361D05EC6C00FB8AC2 /* Assets.xcassets */; };
+		D311303A1D05EC6C00FB8AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */; };
+		D38B14B11D0B998800C88130 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = D38B14B01D0B998800C88130 /* Cartfile */; };
+		D3DEB01F1D0DDA5600A650E1 /* MadgwickAHRS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DEB01E1D0DDA5600A650E1 /* MadgwickAHRS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D31130271D05EC6C00FB8AC2 /* RawIMU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawIMU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D311302B1D05EC6C00FB8AC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D311302D1D05EC6C00FB8AC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D311302E1D05EC6C00FB8AC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D31130301D05EC6C00FB8AC2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D31130311D05EC6C00FB8AC2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D31130341D05EC6C00FB8AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D31130361D05EC6C00FB8AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D31130391D05EC6C00FB8AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D311303B1D05EC6C00FB8AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D38B14B01D0B998800C88130 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		D3DEB01E1D0DDA5600A650E1 /* MadgwickAHRS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MadgwickAHRS.framework; path = Carthage/Build/iOS/MadgwickAHRS.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D31130241D05EC6C00FB8AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DEB01F1D0DDA5600A650E1 /* MadgwickAHRS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D311301E1D05EC6C00FB8AC2 = {
+			isa = PBXGroup;
+			children = (
+				D3DEB01E1D0DDA5600A650E1 /* MadgwickAHRS.framework */,
+				D38B14B01D0B998800C88130 /* Cartfile */,
+				D31130291D05EC6C00FB8AC2 /* RawIMU */,
+				D31130281D05EC6C00FB8AC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D31130281D05EC6C00FB8AC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D31130271D05EC6C00FB8AC2 /* RawIMU.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D31130291D05EC6C00FB8AC2 /* RawIMU */ = {
+			isa = PBXGroup;
+			children = (
+				D311302D1D05EC6C00FB8AC2 /* AppDelegate.h */,
+				D311302E1D05EC6C00FB8AC2 /* AppDelegate.m */,
+				D31130301D05EC6C00FB8AC2 /* ViewController.h */,
+				D31130311D05EC6C00FB8AC2 /* ViewController.m */,
+				D31130331D05EC6C00FB8AC2 /* Main.storyboard */,
+				D31130361D05EC6C00FB8AC2 /* Assets.xcassets */,
+				D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */,
+				D311303B1D05EC6C00FB8AC2 /* Info.plist */,
+				D311302A1D05EC6C00FB8AC2 /* Supporting Files */,
+			);
+			path = RawIMU;
+			sourceTree = "<group>";
+		};
+		D311302A1D05EC6C00FB8AC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D311302B1D05EC6C00FB8AC2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D31130261D05EC6C00FB8AC2 /* RawIMU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D311303E1D05EC6C00FB8AC2 /* Build configuration list for PBXNativeTarget "RawIMU" */;
+			buildPhases = (
+				D31130231D05EC6C00FB8AC2 /* Sources */,
+				D31130241D05EC6C00FB8AC2 /* Frameworks */,
+				D31130251D05EC6C00FB8AC2 /* Resources */,
+				D38B14B61D0C341100C88130 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RawIMU;
+			productName = RawIMU;
+			productReference = D31130271D05EC6C00FB8AC2 /* RawIMU.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D311301F1D05EC6C00FB8AC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Brian Lambert";
+				TargetAttributes = {
+					D31130261D05EC6C00FB8AC2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D31130221D05EC6C00FB8AC2 /* Build configuration list for PBXProject "RawIMU" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D311301E1D05EC6C00FB8AC2;
+			productRefGroup = D31130281D05EC6C00FB8AC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D31130261D05EC6C00FB8AC2 /* RawIMU */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D31130251D05EC6C00FB8AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D311303A1D05EC6C00FB8AC2 /* LaunchScreen.storyboard in Resources */,
+				D31130371D05EC6C00FB8AC2 /* Assets.xcassets in Resources */,
+				D38B14B11D0B998800C88130 /* Cartfile in Resources */,
+				D31130351D05EC6C00FB8AC2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D38B14B61D0C341100C88130 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MadgwickAHRS.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D31130231D05EC6C00FB8AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31130321D05EC6C00FB8AC2 /* ViewController.m in Sources */,
+				D311302F1D05EC6C00FB8AC2 /* AppDelegate.m in Sources */,
+				D311302C1D05EC6C00FB8AC2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D31130331D05EC6C00FB8AC2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D31130341D05EC6C00FB8AC2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D31130391D05EC6C00FB8AC2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D311303C1D05EC6C00FB8AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D311303D1D05EC6C00FB8AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D311303F1D05EC6C00FB8AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RawIMU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.softwarenerd.RawIMU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		D31130401D05EC6C00FB8AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RawIMU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.softwarenerd.RawIMU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D31130221D05EC6C00FB8AC2 /* Build configuration list for PBXProject "RawIMU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311303C1D05EC6C00FB8AC2 /* Debug */,
+				D311303D1D05EC6C00FB8AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D311303E1D05EC6C00FB8AC2 /* Build configuration list for PBXNativeTarget "RawIMU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311303F1D05EC6C00FB8AC2 /* Debug */,
+				D31130401D05EC6C00FB8AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D311301F1D05EC6C00FB8AC2 /* Project object */;
+}
