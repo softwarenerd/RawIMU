@@ -14,7 +14,7 @@
 		D31130371D05EC6C00FB8AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31130361D05EC6C00FB8AC2 /* Assets.xcassets */; };
 		D311303A1D05EC6C00FB8AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */; };
 		D38B14B11D0B998800C88130 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = D38B14B01D0B998800C88130 /* Cartfile */; };
-		D3DEB01F1D0DDA5600A650E1 /* MadgwickAHRS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DEB01E1D0DDA5600A650E1 /* MadgwickAHRS.framework */; };
+		D3DEB0211D0DE91400A650E1 /* MadgwickAHRS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DEB0201D0DE91400A650E1 /* MadgwickAHRS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		D31130391D05EC6C00FB8AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D311303B1D05EC6C00FB8AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38B14B01D0B998800C88130 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		D3DEB01E1D0DDA5600A650E1 /* MadgwickAHRS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MadgwickAHRS.framework; path = Carthage/Build/iOS/MadgwickAHRS.framework; sourceTree = "<group>"; };
+		D3DEB0201D0DE91400A650E1 /* MadgwickAHRS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MadgwickAHRS.framework; path = Carthage/Build/iOS/MadgwickAHRS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DEB01F1D0DDA5600A650E1 /* MadgwickAHRS.framework in Frameworks */,
+				D3DEB0211D0DE91400A650E1 /* MadgwickAHRS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		D311301E1D05EC6C00FB8AC2 = {
 			isa = PBXGroup;
 			children = (
-				D3DEB01E1D0DDA5600A650E1 /* MadgwickAHRS.framework */,
+				D3DEB0201D0DE91400A650E1 /* MadgwickAHRS.framework */,
 				D38B14B01D0B998800C88130 /* Cartfile */,
 				D31130291D05EC6C00FB8AC2 /* RawIMU */,
 				D31130281D05EC6C00FB8AC2 /* Products */,
