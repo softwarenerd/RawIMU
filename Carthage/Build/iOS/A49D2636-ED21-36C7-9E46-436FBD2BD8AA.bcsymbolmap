@@ -1,0 +1,158 @@
+BCSymbolMap Version: 1.0
+-[MadgwickSensorFusion initWithSampleFrequencyHz:beta:]
+-[MadgwickSensorFusion updateWithGyroscopeX:gyroscopeY:gyroscopeZ:accelerometerX:accelerometerY:accelerometerZ:]
+-[MadgwickSensorFusion updateWithGyroscopeX:gyroscopeY:gyroscopeZ:accelerometerX:accelerometerY:accelerometerZ:magnetometerX:magnetometerY:magnetometerZ:]
+-[MadgwickSensorFusion q0]
+-[MadgwickSensorFusion q1]
+-[MadgwickSensorFusion q2]
+-[MadgwickSensorFusion q3]
+OBJC_CLASSLIST_SUP_REFS_$_
+OBJC_METH_VAR_NAME_
+OBJC_SELECTOR_REFERENCES_
+OBJC_IVAR_$_MadgwickSensorFusion._sampleFrequencyHz
+OBJC_IVAR_$_MadgwickSensorFusion._beta
+OBJC_IVAR_$_MadgwickSensorFusion._q0
+OBJC_IVAR_$_MadgwickSensorFusion._q1
+OBJC_IVAR_$_MadgwickSensorFusion._q2
+OBJC_IVAR_$_MadgwickSensorFusion._q3
+OBJC_METH_VAR_NAME_.1
+OBJC_SELECTOR_REFERENCES_.2
+OBJC_CLASS_NAME_
+l_OBJC_METACLASS_RO_$_MadgwickSensorFusion
+OBJC_METH_VAR_NAME_.3
+OBJC_METH_VAR_TYPE_
+OBJC_METH_VAR_TYPE_.4
+OBJC_METH_VAR_NAME_.5
+OBJC_METH_VAR_TYPE_.6
+OBJC_METH_VAR_NAME_.7
+OBJC_METH_VAR_TYPE_.8
+OBJC_METH_VAR_NAME_.9
+OBJC_METH_VAR_NAME_.10
+OBJC_METH_VAR_NAME_.11
+l_OBJC_$_INSTANCE_METHODS_MadgwickSensorFusion
+OBJC_METH_VAR_NAME_.12
+OBJC_METH_VAR_TYPE_.13
+OBJC_METH_VAR_NAME_.14
+OBJC_METH_VAR_NAME_.15
+OBJC_METH_VAR_NAME_.16
+OBJC_METH_VAR_NAME_.17
+OBJC_METH_VAR_NAME_.18
+l_OBJC_$_INSTANCE_VARIABLES_MadgwickSensorFusion
+OBJC_PROP_NAME_ATTR_
+OBJC_PROP_NAME_ATTR_.19
+OBJC_PROP_NAME_ATTR_.20
+OBJC_PROP_NAME_ATTR_.21
+OBJC_PROP_NAME_ATTR_.22
+OBJC_PROP_NAME_ATTR_.23
+OBJC_PROP_NAME_ATTR_.24
+OBJC_PROP_NAME_ATTR_.25
+l_OBJC_$_PROP_LIST_MadgwickSensorFusion
+l_OBJC_CLASS_RO_$_MadgwickSensorFusion
+OBJC_LABEL_CLASS_$
+Apple LLVM version 7.3.0 (clang-703.0.31)
+invSqrt
+/Users/brian/Code/RawIMU/Carthage/Checkouts/MadgwickAHRS/MadgwickAHRS/MadgwickSensorFusion.m
+/Users/brian/Code/RawIMU/Carthage/Checkouts/MadgwickAHRS
+-[MadgwickSensorFusion q3]
+/Users/brian/Code/RawIMU/Carthage/Checkouts/MadgwickAHRS/MadgwickAHRS/MadgwickSensorFusion.h
+-[MadgwickSensorFusion q2]
+-[MadgwickSensorFusion q1]
+-[MadgwickSensorFusion q0]
+-[MadgwickSensorFusion updateWithGyroscopeX:gyroscopeY:gyroscopeZ:accelerometerX:accelerometerY:accelerometerZ:magnetometerX:magnetometerY:magnetometerZ:]
+-[MadgwickSensorFusion updateWithGyroscopeX:gyroscopeY:gyroscopeZ:accelerometerX:accelerometerY:accelerometerZ:]
+-[MadgwickSensorFusion initWithSampleFrequencyHz:beta:]
+-[CoreMotionMadgwickTestDriver initSampleFrequencyHz:beta:]
+-[CoreMotionMadgwickTestDriver start]
+__37-[CoreMotionMadgwickTestDriver start]_block_invoke
+__copy_helper_block_
+__destroy_helper_block_
+-[CoreMotionMadgwickTestDriver stop]
+-[CoreMotionMadgwickTestDriver delegate]
+-[CoreMotionMadgwickTestDriver setDelegate:]
+-[CoreMotionMadgwickTestDriver .cxx_destruct]
+OBJC_CLASSLIST_REFERENCES_$_
+OBJC_IVAR_$_CoreMotionMadgwickTestDriver._motionManager
+OBJC_SELECTOR_REFERENCES_.4
+OBJC_SELECTOR_REFERENCES_.6
+OBJC_CLASSLIST_REFERENCES_$_.7
+OBJC_IVAR_$_CoreMotionMadgwickTestDriver._operationQueue
+.str
+_unnamed_cfstring_
+OBJC_METH_VAR_NAME_.8
+OBJC_SELECTOR_REFERENCES_.9
+OBJC_SELECTOR_REFERENCES_.11
+OBJC_CLASSLIST_REFERENCES_$_.12
+OBJC_METH_VAR_NAME_.13
+OBJC_SELECTOR_REFERENCES_.14
+OBJC_IVAR_$_CoreMotionMadgwickTestDriver._madgwickSensorFusion
+OBJC_SELECTOR_REFERENCES_.16
+OBJC_SELECTOR_REFERENCES_.18
+OBJC_METH_VAR_NAME_.19
+OBJC_SELECTOR_REFERENCES_.20
+OBJC_METH_VAR_NAME_.21
+OBJC_SELECTOR_REFERENCES_.22
+OBJC_METH_VAR_NAME_.23
+OBJC_SELECTOR_REFERENCES_.24
+OBJC_METH_VAR_NAME_.25
+OBJC_SELECTOR_REFERENCES_.26
+OBJC_METH_VAR_NAME_.27
+OBJC_SELECTOR_REFERENCES_.28
+OBJC_METH_VAR_NAME_.29
+OBJC_SELECTOR_REFERENCES_.30
+OBJC_METH_VAR_NAME_.31
+OBJC_SELECTOR_REFERENCES_.32
+OBJC_METH_VAR_NAME_.33
+OBJC_SELECTOR_REFERENCES_.34
+OBJC_METH_VAR_NAME_.35
+OBJC_SELECTOR_REFERENCES_.36
+OBJC_METH_VAR_NAME_.37
+OBJC_SELECTOR_REFERENCES_.38
+OBJC_METH_VAR_NAME_.39
+OBJC_SELECTOR_REFERENCES_.40
+OBJC_METH_VAR_NAME_.41
+OBJC_SELECTOR_REFERENCES_.42
+OBJC_METH_VAR_NAME_.43
+OBJC_SELECTOR_REFERENCES_.44
+.str.45
+__block_descriptor_tmp
+OBJC_METH_VAR_NAME_.46
+OBJC_SELECTOR_REFERENCES_.47
+OBJC_METH_VAR_NAME_.48
+OBJC_SELECTOR_REFERENCES_.49
+OBJC_IVAR_$_CoreMotionMadgwickTestDriver._delegate
+l_OBJC_METACLASS_RO_$_CoreMotionMadgwickTestDriver
+OBJC_CLASS_NAME_.50
+OBJC_METH_VAR_NAME_.51
+OBJC_METH_VAR_NAME_.52
+OBJC_METH_VAR_TYPE_.53
+OBJC_METH_VAR_NAME_.54
+OBJC_METH_VAR_NAME_.55
+OBJC_METH_VAR_TYPE_.56
+OBJC_METH_VAR_NAME_.57
+OBJC_METH_VAR_TYPE_.58
+l_OBJC_$_INSTANCE_METHODS_CoreMotionMadgwickTestDriver
+OBJC_METH_VAR_NAME_.59
+OBJC_METH_VAR_TYPE_.60
+OBJC_METH_VAR_NAME_.61
+OBJC_METH_VAR_TYPE_.62
+OBJC_METH_VAR_NAME_.63
+OBJC_METH_VAR_TYPE_.64
+OBJC_METH_VAR_NAME_.65
+OBJC_METH_VAR_TYPE_.66
+l_OBJC_$_INSTANCE_VARIABLES_CoreMotionMadgwickTestDriver
+OBJC_CLASS_NAME_.67
+OBJC_PROP_NAME_ATTR_.68
+l_OBJC_$_PROP_LIST_CoreMotionMadgwickTestDriver
+l_OBJC_CLASS_RO_$_CoreMotionMadgwickTestDriver
+RadiansToDegrees
+/Users/brian/Code/RawIMU/Carthage/Checkouts/MadgwickAHRS/MadgwickAHRS/CoreMotionMadgwickTestDriver.m
+-[CoreMotionMadgwickTestDriver .cxx_destruct]
+-[CoreMotionMadgwickTestDriver setDelegate:]
+/Users/brian/Code/RawIMU/Carthage/Checkouts/MadgwickAHRS/MadgwickAHRS/CoreMotionMadgwickTestDriver.h
+-[CoreMotionMadgwickTestDriver delegate]
+-[CoreMotionMadgwickTestDriver stop]
+-[CoreMotionMadgwickTestDriver start]
+-[CoreMotionMadgwickTestDriver initSampleFrequencyHz:beta:]
+CalculateEulerAnglesFromQuaternion
+NormalizeAngle
+/Users/brian/Library/Developer/Xcode/DerivedData/MadgwickAHRS-aiobyabjtcvnhvgpwbdfvxzvjtjp/Build/Intermediates/MadgwickAHRS.build/Release-iphoneos/MadgwickAHRS.build/DerivedSources/MadgwickAHRS_vers.c

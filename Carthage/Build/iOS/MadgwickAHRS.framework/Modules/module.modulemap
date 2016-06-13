@@ -1,0 +1,6 @@
+framework module MadgwickAHRS {
+  umbrella header "MadgwickAHRS.h"
+
+  export *
+  module * { export * }
+}
