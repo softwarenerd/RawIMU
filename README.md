@@ -4,6 +4,8 @@
 
 RawIMU is a test program for the [MadgwickAHRS](https://github.com/softwarenerd/MadgwickAHRS) package. [MadgwickAHRS](http://www.x-io.co.uk/open-source-imu-and-ahrs-algorithms/) is a port of the [C implementation](http://www.x-io.co.uk/res/sw/madgwick_algorithm_c.zip) of MadgwickAHRS to an iOS Framework written in Objective-C.
 
+![RawIMU](Documentation/RawIMU.png)
+
 ## Getting Started
 
 RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage). Follow the [Carthage build instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for building for iOS.
