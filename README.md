@@ -14,10 +14,6 @@ RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage).
 
 `~/Code git clone git@github.com:softwarenerd/RawIMU.git`
 
-#### Optionally, Build Carthage Dependencies
-
-```~/Code/RawIMU carthage bootstrap```
-
 ## Logging
 
 RawIMU provides detailed logging so you can compare its performance to CoreMotion.
