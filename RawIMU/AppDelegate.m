@@ -7,7 +7,7 @@
 //
 
 @import CoreMotion;
-@import MadgwickAHRS;
+@import Fused;
 #import "AppDelegate.h"
 
 // AppDelegate (UIApplicationDelegate) interface.
