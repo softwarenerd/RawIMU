@@ -21,8 +21,8 @@ static inline void OnMainThread(dispatch_block_t block)
     dispatch_async(dispatch_get_main_queue(), block);
 }
 
-// ViewController (CoreMotionMadgwickTestDriverDelegate) interface.
-@interface ViewController (CoreMotionMadgwickTestDriverDelegate) <CoreMotionMadgwickTestDriverDelegate>
+// ViewController (CoreMotionTestDriverDelegate) interface.
+@interface ViewController (CoreMotionTestDriverDelegate) <CoreMotionTestDriverDelegate>
 @end
 
 // ViewController (Internal) interface.
@@ -45,8 +45,8 @@ static inline void OnMainThread(dispatch_block_t block)
     // The samples array that is dumped when a run ends.
     NSMutableArray<NSDictionary *> * _samplesArray;
 
-    // The CoreMotionMadgwickTestDriver.
-    CoreMotionMadgwickTestDriver * _coreMotionMadgwickTestDriver;
+    // The CoreMotionTestDriver.
+    CoreMotionTestDriver * _coreMotionTestDriver;
     
     // The gyroscope X label.
     IBOutlet UILabel * _labelGX;
@@ -131,11 +131,11 @@ static inline void OnMainThread(dispatch_block_t block)
 
 @end
 
-// ViewController (CoreMotionMadgwickTestDriverDelegate) interface.
-@implementation ViewController (CoreMotionMadgwickTestDriverDelegate)
+// ViewController (CoreMotionTestDriverDelegate) interface.
+@implementation ViewController (CoreMotionTestDriverDelegate)
 
 // Notifies the delegate of an update.
-- (void)coreMotionMadgwickTestDriver:(CoreMotionMadgwickTestDriver *)coreMotionMadgwickTestDriver
+- (void)CoreMotionTestDriver:(CoreMotionTestDriver *)CoreMotionTestDriver
                  didUpdateGyroscopeX:(float)gx
                           gyroscopeY:(float)gy
                           gyroscopeZ:(float)gz
@@ -236,15 +236,15 @@ static inline void OnMainThread(dispatch_block_t block)
     if ([_switchRunning isOn])
     {
         _samplesArray = [[NSMutableArray<NSDictionary *> alloc] init];
-        _coreMotionMadgwickTestDriver = [[CoreMotionMadgwickTestDriver alloc] initSampleFrequencyHz:10.0f
+        _CoreMotionTestDriver = [[CoreMotionTestDriver alloc] initSampleFrequencyHz:10.0f
                                                                                                beta:0.6045997880780726f];
-        [_coreMotionMadgwickTestDriver setDelegate:(id<CoreMotionMadgwickTestDriverDelegate>)self];
-        [_coreMotionMadgwickTestDriver start];
+        [_CoreMotionTestDriver setDelegate:(id<CoreMotionTestDriverDelegate>)self];
+        [_CoreMotionTestDriver start];
     }
     else
     {
-        [_coreMotionMadgwickTestDriver stop];
-        _coreMotionMadgwickTestDriver = nil;
+        [_CoreMotionTestDriver stop];
+        _CoreMotionTestDriver = nil;
         NSError * error;
         NSData * data = [NSJSONSerialization dataWithJSONObject:_samplesArray
                                                         options:0

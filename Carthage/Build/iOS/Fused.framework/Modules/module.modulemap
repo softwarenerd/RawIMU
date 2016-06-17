@@ -1,0 +1,6 @@
+framework module Fused {
+  umbrella header "Fused.h"
+
+  export *
+  module * { export * }
+}
