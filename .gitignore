@@ -18,4 +18,4 @@ xcuserdata/
 
 # Carthage
 Carthage/Checkouts
-# Carthage/Build
+Carthage/Build/iOS/*.bcsymbolmap
