@@ -6,14 +6,8 @@
 //  Copyright © 2016 Brian Lambert. All rights reserved.
 //
 
-@import Fused;
+#import <Fused/Fused.h>
 #import "ViewController.h"
-
-// Converts radians to degrees.
-static inline float RadiansToDegrees(float radians)
-{
-    return radians * 180.0f / M_PI;
-}
 
 // Executes the specified block on the main thread.
 static inline void OnMainThread(dispatch_block_t block)
@@ -125,6 +119,8 @@ static inline void OnMainThread(dispatch_block_t block)
 // Called when there is a memory warning.
 - (void)didReceiveMemoryWarning
 {
+    [CoreMotionTestDriver degreesFromRadians:20];
+
     // Call the base class's method.
     [super didReceiveMemoryWarning];
 }
@@ -135,7 +131,7 @@ static inline void OnMainThread(dispatch_block_t block)
 @implementation ViewController (CoreMotionTestDriverDelegate)
 
 // Notifies the delegate of an update.
-- (void)coreMotionTestDriver:(CoreMotionTestDriver *)CoreMotionTestDriver
+- (void)coreMotionTestDriver:(CoreMotionTestDriver *)coreMotionTestDriver
          didUpdateGyroscopeX:(float)gx
                   gyroscopeY:(float)gy
                   gyroscopeZ:(float)gz
@@ -202,9 +198,9 @@ static inline void OnMainThread(dispatch_block_t block)
     NSLog(@"     Gyroscope (rad/s): X: %@, Y: %@, Z: %@", [_numberFormatterLogging stringFromNumber:@(gx)],
                                                           [_numberFormatterLogging stringFromNumber:@(gy)],
                                                           [_numberFormatterLogging stringFromNumber:@(gz)]);
-    NSLog(@"     Gyroscope (deg/s): X: %@, Y: %@, Z: %@", [_numberFormatterLogging stringFromNumber:@(RadiansToDegrees(gx))],
-                                                          [_numberFormatterLogging stringFromNumber:@(RadiansToDegrees(gy))],
-                                                          [_numberFormatterLogging stringFromNumber:@(RadiansToDegrees(gz))]);
+    NSLog(@"     Gyroscope (deg/s): X: %@, Y: %@, Z: %@", [_numberFormatterLogging stringFromNumber:@([CoreMotionTestDriver degreesFromRadians:gx])],
+                                                          [_numberFormatterLogging stringFromNumber:@([CoreMotionTestDriver degreesFromRadians:gy])],
+                                                          [_numberFormatterLogging stringFromNumber:@([CoreMotionTestDriver degreesFromRadians:gz])]);
     NSLog(@"     Accelerometer (g): X: %@, Y: %@, Z: %@", [_numberFormatterLogging stringFromNumber:@(ax * -1.0)],
                                                           [_numberFormatterLogging stringFromNumber:@(ay * -1.0)],
                                                           [_numberFormatterLogging stringFromNumber:@(az * -1.0)]);
@@ -236,8 +232,8 @@ static inline void OnMainThread(dispatch_block_t block)
     if ([_switchRunning isOn])
     {
         _samplesArray = [[NSMutableArray<NSDictionary *> alloc] init];
-        _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initSampleFrequencyHz:10.0f
-                                                                               beta:0.6045997880780726f];
+        _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMadgwickSensorFusionWithSampleFrequencyHz:10.0f
+                                                                                                       beta:0.6045997880780726f];
         [_coreMotionTestDriver setDelegate:(id<CoreMotionTestDriverDelegate>)self];
         [_coreMotionTestDriver start];
     }
