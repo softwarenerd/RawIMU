@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/aur/license/yaourt.svg)](https://raw.githubusercontent.com/softwarenerd/RawIMU/master/LICENSE.md) ![platforms](https://img.shields.io/badge/platforms-iOS%20-lightgrey.svg)
 
-RawIMU is a test program for the [MadgwickAHRS](https://github.com/softwarenerd/MadgwickAHRS) package. [MadgwickAHRS](http://www.x-io.co.uk/open-source-imu-and-ahrs-algorithms/) is a port of the [C implementation](http://www.x-io.co.uk/res/sw/madgwick_algorithm_c.zip) of MadgwickAHRS to an iOS Framework written in Objective-C.
+RawIMU is a test program for the [Fused](https://github.com/softwarenerd/Fused) iOS framework. [Fused](https://github.com/softwarenerd/Fused) is an iOS Framework that contains Objective-C ports of MadgwickAHRS and MahonyAHRS. The original C implementations of MadgwickAHRS and MahonyAHRS can be found [here](http://www.x-io.co.uk/res/sw/madgwick_algorithm_c.zip).
 
 ![RawIMU](Documentation/RawIMU.png)
 
@@ -41,4 +41,4 @@ Madgwick / CoreMotion Comparison
 
 ## License
 
-MadgwickAHRS is released under the [GNU General Public License](LICENSE.md).
+RawIMU is released under the [GNU General Public License](LICENSE.md).
