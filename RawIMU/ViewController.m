@@ -22,7 +22,8 @@ static inline void OnMainThread(dispatch_block_t block)
 // ViewController (Internal) interface.
 @interface ViewController (Internal)
 
-- (IBAction)switchRunningValueChanged:(UISwitch *)sender;
+// The on / off segmented control value changed action.
+- (IBAction)segmentedControlOnOffValueChanged:(UISegmentedControl *)sender;
 
 @end
 
@@ -78,17 +79,23 @@ static inline void OnMainThread(dispatch_block_t block)
     // The CoreMotion yaw label.
     IBOutlet UILabel * _labelCoreMotionYaw;
 
-    // The Madgwick roll label.
-    IBOutlet UILabel * _labelMadgwickRoll;
+    // The Euler angles label.
+    IBOutlet UILabel *_labelEulerAngles;
+    
+    // The sensor fusion roll label.
+    IBOutlet UILabel * _labelSensorFusionRoll;
 
-    // The Madgwick pitch label.
-    IBOutlet UILabel * _labelMadgwickPitch;
+    // The sensor fusion pitch label.
+    IBOutlet UILabel * _labelSensorFusionPitch;
     
-    // The Madgwick yaw label.
-    IBOutlet UILabel * _labelMadgwickYaw;
+    // The sensor fusion yaw label.
+    IBOutlet UILabel * _labelSensorFusionYaw;
     
-    // The running switch.
-    IBOutlet UISwitch * _switchRunning;
+    // The Madgwick / Mangony segmented control.
+    IBOutlet UISegmentedControl *_segmentedControlMadgwickMahony;
+    
+    // The on / off segmented control.
+    IBOutlet UISegmentedControl *_segmentedControlOnOff;
 }
 
 // Called when the view loads.
@@ -119,8 +126,6 @@ static inline void OnMainThread(dispatch_block_t block)
 // Called when there is a memory warning.
 - (void)didReceiveMemoryWarning
 {
-    [CoreMotionTestDriver degreesFromRadians:20];
-
     // Call the base class's method.
     [super didReceiveMemoryWarning];
 }
@@ -168,26 +173,23 @@ static inline void OnMainThread(dispatch_block_t block)
                                @"coreMotionPitch":  @(coreMotionPitch),
                                @"coreMotionYaw":    @(coreMotionYaw)}];
     
+    // Update the labels.
     OnMainThread(^{
         [_labelGX setText:[_numberFormatterDisplay stringFromNumber:@(gx)]];
         [_labelGY setText:[_numberFormatterDisplay stringFromNumber:@(gy)]];
         [_labelGZ setText:[_numberFormatterDisplay stringFromNumber:@(gz)]];
-
         [_labelAX setText:[_numberFormatterDisplay stringFromNumber:@(ax)]];
         [_labelAY setText:[_numberFormatterDisplay stringFromNumber:@(ay)]];
         [_labelAZ setText:[_numberFormatterDisplay stringFromNumber:@(az)]];
-
         [_labelMX setText:[_numberFormatterDisplay stringFromNumber:@(mx)]];
         [_labelMY setText:[_numberFormatterDisplay stringFromNumber:@(my)]];
         [_labelMZ setText:[_numberFormatterDisplay stringFromNumber:@(mz)]];
-        
         [_labelCoreMotionRoll setText:[_numberFormatterDisplay stringFromNumber:@(coreMotionRoll)]];
         [_labelCoreMotionPitch setText:[_numberFormatterDisplay stringFromNumber:@(coreMotionPitch)]];
         [_labelCoreMotionYaw setText:[_numberFormatterDisplay stringFromNumber:@(coreMotionYaw)]];
-
-        [_labelMadgwickRoll setText:[_numberFormatterDisplay stringFromNumber:@(roll)]];
-        [_labelMadgwickPitch setText:[_numberFormatterDisplay stringFromNumber:@(pitch)]];
-        [_labelMadgwickYaw setText:[_numberFormatterDisplay stringFromNumber:@(yaw)]];
+        [_labelSensorFusionRoll setText:[_numberFormatterDisplay stringFromNumber:@(roll)]];
+        [_labelSensorFusionPitch setText:[_numberFormatterDisplay stringFromNumber:@(pitch)]];
+        [_labelSensorFusionYaw setText:[_numberFormatterDisplay stringFromNumber:@(yaw)]];
     });
     
     // Logging.
@@ -208,15 +210,15 @@ static inline void OnMainThread(dispatch_block_t block)
                                                           [_numberFormatterLogging stringFromNumber:@(my)],
                                                           [_numberFormatterLogging stringFromNumber:@(mz)]);
     NSLog(@"-------------------------------------------------------------------------");
-    NSLog(@"Madgwick / CoreMotion Comparison");
+    NSLog(@"Sensor Fusion / CoreMotion Comparison");
     NSLog(@"-------------------------------------------------------------------------");
-    NSLog(@"      Madgwick Roll (deg): %@", [_numberFormatterLogging stringFromNumber:@(roll)]);
+    NSLog(@" Sensor Fusion Roll (deg): %@", [_numberFormatterLogging stringFromNumber:@(roll)]);
     NSLog(@"    CoreMotion Roll (deg): %@", [_numberFormatterLogging stringFromNumber:@(coreMotionRoll)]);
     NSLog(@"---------------------------------------");
-    NSLog(@"     Madgwick Pitch (deg): %@", [_numberFormatterLogging stringFromNumber:@(pitch)]);
+    NSLog(@"Sensor Fusion Pitch (deg): %@", [_numberFormatterLogging stringFromNumber:@(pitch)]);
     NSLog(@"   CoreMotion Pitch (deg): %@", [_numberFormatterLogging stringFromNumber:@(coreMotionPitch)]);
     NSLog(@"---------------------------------------");
-    NSLog(@"       Madgwick Yaw (deg): %@", [_numberFormatterLogging stringFromNumber:@(yaw)]);
+    NSLog(@"  Sensor Fusion Yaw (deg): %@", [_numberFormatterLogging stringFromNumber:@(yaw)]);
     NSLog(@"     CoreMotion Yaw (deg): %@", [_numberFormatterLogging stringFromNumber:@(coreMotionYaw)]);
 }
 
@@ -225,29 +227,43 @@ static inline void OnMainThread(dispatch_block_t block)
 // ViewController (Internal) implementation.
 @implementation ViewController (Internal)
 
-// Running switch value changed.
-- (IBAction)switchRunningValueChanged:(UISwitch *)sender
+- (IBAction)segmentedControlOnOffValueChanged:(UISegmentedControl *)sender
 {
     // If the switch is on, start test; otherwise, stop it and dump the samples.
-    if ([_switchRunning isOn])
+    if ([_segmentedControlOnOff selectedSegmentIndex] == 1)
     {
-        _samplesArray = [[NSMutableArray<NSDictionary *> alloc] init];
+        // Initialize the CoreMotionTestDriver in Madgwick mode or Mahony mode.
+        if ([_segmentedControlMadgwickMahony selectedSegmentIndex] == 0)
+        {
+            _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMadgwickSensorFusionWithSampleFrequencyHz:10.0f
+                                                                                                           beta:0.6045997880780726f];
+            [_labelEulerAngles setText:@"Madgwick Euler Angles (deg)"];
+        }
+        else
+        {
+            _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMahonySensorFusionWithSampleFrequencyHz:10.0f
+                                                                                                        twoKp:2.0f * 0.5f
+                                                                                                        twoKi:2.0f * 0.0f];
+            [_labelEulerAngles setText:@"Mahony Euler Angles (deg)"];
+        }
         
-#if false
-        _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMadgwickSensorFusionWithSampleFrequencyHz:10.0f
-                                                                                                       beta:0.6045997880780726f];
-#else
-        _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMahonySensorFusionWithSampleFrequencyHz:10.0f
-                                                                                                    twoKp:2.0f * 0.5f
-                                                                                                    twoKi:2.0f * 0.0f];
-#endif
+        // While running, disable Madgwick / Mahony segmented control.
+        [_segmentedControlMadgwickMahony setEnabled:NO];
+        
+        // Allocate the samples array.
+        _samplesArray = [[NSMutableArray<NSDictionary *> alloc] init];
+
+        // Start it up.
         [_coreMotionTestDriver setDelegate:(id<CoreMotionTestDriverDelegate>)self];
         [_coreMotionTestDriver start];
     }
     else
     {
+        // Stop and release the CoreMotionTestDriver.
         [_coreMotionTestDriver stop];
         _coreMotionTestDriver = nil;
+        
+        // Dump the samples.
         NSError * error;
         NSData * data = [NSJSONSerialization dataWithJSONObject:_samplesArray
                                                         options:0
@@ -256,10 +272,29 @@ static inline void OnMainThread(dispatch_block_t block)
         {
             NSString * samplesJSON = [[NSString alloc] initWithData:data
                                                            encoding:NSUTF8StringEncoding];
-            NSLog(@"JSONS samples!\n%@", samplesJSON);
+            NSLog(@"JSONS samples:\n%@", samplesJSON);
         }
+        
+        // Release the samples array.
         _samplesArray = nil;
+        
+        // Update all the labels.
+        [_labelGX setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelGY setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelGZ setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelAX setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelAY setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelAZ setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelMX setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelMY setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelMZ setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelCoreMotionRoll setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelCoreMotionPitch setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelCoreMotionYaw setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelEulerAngles setText:@"Euler Angles (deg)"];
+        [_labelSensorFusionRoll setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelSensorFusionPitch setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        [_labelSensorFusionYaw setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
     }
 }
-
 @end

@@ -12,7 +12,6 @@
 		D31130321D05EC6C00FB8AC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31130311D05EC6C00FB8AC2 /* ViewController.m */; };
 		D31130351D05EC6C00FB8AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31130331D05EC6C00FB8AC2 /* Main.storyboard */; };
 		D31130371D05EC6C00FB8AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31130361D05EC6C00FB8AC2 /* Assets.xcassets */; };
-		D311303A1D05EC6C00FB8AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */; };
 		D38B14B11D0B998800C88130 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = D38B14B01D0B998800C88130 /* Cartfile */; };
 		D3E5AA6D1D15781F002DB8E6 /* Fused.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5AA6C1D15781F002DB8E6 /* Fused.framework */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 		D31130311D05EC6C00FB8AC2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D31130341D05EC6C00FB8AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D31130361D05EC6C00FB8AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D31130391D05EC6C00FB8AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D311303B1D05EC6C00FB8AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38B14B01D0B998800C88130 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		D3E5AA6C1D15781F002DB8E6 /* Fused.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fused.framework; path = Carthage/Build/iOS/Fused.framework; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 				D31130311D05EC6C00FB8AC2 /* ViewController.m */,
 				D31130331D05EC6C00FB8AC2 /* Main.storyboard */,
 				D31130361D05EC6C00FB8AC2 /* Assets.xcassets */,
-				D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */,
 				D311303B1D05EC6C00FB8AC2 /* Info.plist */,
 				D311302A1D05EC6C00FB8AC2 /* Supporting Files */,
 			);
@@ -149,7 +146,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D311303A1D05EC6C00FB8AC2 /* LaunchScreen.storyboard in Resources */,
 				D31130371D05EC6C00FB8AC2 /* Assets.xcassets in Resources */,
 				D38B14B11D0B998800C88130 /* Cartfile in Resources */,
 				D31130351D05EC6C00FB8AC2 /* Main.storyboard in Resources */,
@@ -195,14 +191,6 @@
 				D31130341D05EC6C00FB8AC2 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D31130381D05EC6C00FB8AC2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D31130391D05EC6C00FB8AC2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -294,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -312,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
