@@ -232,8 +232,15 @@ static inline void OnMainThread(dispatch_block_t block)
     if ([_switchRunning isOn])
     {
         _samplesArray = [[NSMutableArray<NSDictionary *> alloc] init];
+        
+#if false
         _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMadgwickSensorFusionWithSampleFrequencyHz:10.0f
                                                                                                        beta:0.6045997880780726f];
+#else
+        _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMahonySensorFusionWithSampleFrequencyHz:10.0f
+                                                                                                    twoKp:2.0f * 0.5f
+                                                                                                    twoKi:2.0f * 0.0f];
+#endif
         [_coreMotionTestDriver setDelegate:(id<CoreMotionTestDriverDelegate>)self];
         [_coreMotionTestDriver start];
     }
