@@ -295,6 +295,9 @@ static inline void OnMainThread(dispatch_block_t block)
         [_labelSensorFusionRoll setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
         [_labelSensorFusionPitch setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
         [_labelSensorFusionYaw setText:[_numberFormatterDisplay stringFromNumber:@(0.0)]];
+        
+        // Enable Madgwick / Mahony segmented control.
+        [_segmentedControlMadgwickMahony setEnabled:YES];
     }
 }
 @end
