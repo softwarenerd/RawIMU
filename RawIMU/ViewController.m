@@ -242,8 +242,8 @@ static inline void OnMainThread(dispatch_block_t block)
         else
         {
             _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMahonySensorFusionWithSampleFrequencyHz:10.0f
-                                                                                                        twoKp:2.0f * 0.5f
-                                                                                                        twoKi:2.0f * 0.0f];
+                                                                                                        twoKp:2.0f * 1.5f
+                                                                                                        twoKi:2.0f * 0.2f];
             [_labelEulerAngles setText:@"Mahony Euler Angles (deg)"];
         }
         
