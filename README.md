@@ -6,6 +6,8 @@ RawIMU is a test program for the [Fused](https://github.com/softwarenerd/Fused) 
 
 ![RawIMU](Documentation/RawIMU.png)
 
+![RawIMU](Documentation/RawIMU.png)
+
 ## Getting Started
 
 RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage). Follow the [Carthage build instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for building for iOS.
