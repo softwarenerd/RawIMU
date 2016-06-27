@@ -6,8 +6,6 @@ RawIMU is a test program for the [Fused](https://github.com/softwarenerd/Fused) 
 
 ![RawIMU](Documentation/RawIMU.png)
 
-![RawIMU](Documentation/RawIMU.png)
-
 ## Getting Started
 
 RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage). Follow the [Carthage build instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for building for iOS.
@@ -24,21 +22,21 @@ RawIMU provides detailed logging so you can compare its performance to CoreMotio
 -------------------------------------------------------------------------
 CoreMotion Raw Data
 -------------------------------------------------------------------------
-     Gyroscope (rad/s): X:     -0.00190, Y:      0.00046, Z:     -0.00012
-     Gyroscope (deg/s): X:     -0.10902, Y:      0.02641, Z:     -0.00687
-     Accelerometer (g): X:     -0.00713, Y:     -0.00180, Z:     -0.99997
-     Magnetometer (uT): X:    -33.51311, Y:    -24.53882, Z:    -22.25294
+     Gyroscope (rad/s): X:      0.00100, Y:      0.00008, Z:     -0.00129
+     Gyroscope (deg/s): X:      0.05717, Y:      0.00466, Z:     -0.07409
+     Accelerometer (g): X:     -0.00468, Y:      0.02273, Z:     -0.99973
+     Magnetometer (uT): X:      2.56992, Y:    -26.00712, Z:    -37.02501
 -------------------------------------------------------------------------
-Madgwick / CoreMotion Comparison
+Sensor Fusion / CoreMotion Comparison
 -------------------------------------------------------------------------
-      Madgwick Roll (deg):    359.59784
-    CoreMotion Roll (deg):    359.59158
+ Sensor Fusion Roll (deg):     -0.26764
+    CoreMotion Roll (deg):     -0.26821
 ---------------------------------------
-     Madgwick Pitch (deg):      0.09470
-   CoreMotion Pitch (deg):      0.10312
+Sensor Fusion Pitch (deg):     -1.28492
+   CoreMotion Pitch (deg):     -1.30249
 ---------------------------------------
-       Madgwick Yaw (deg):    143.78024
-     CoreMotion Yaw (deg):    143.92413
+  Sensor Fusion Yaw (deg):     84.16334
+     CoreMotion Yaw (deg):     85.44150
 ```
 
 ## License
