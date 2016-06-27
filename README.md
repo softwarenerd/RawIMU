@@ -4,11 +4,13 @@
 
 RawIMU is a test program for the [Fused](https://github.com/softwarenerd/Fused) iOS framework. [Fused](https://github.com/softwarenerd/Fused) is an iOS Framework that contains Objective-C ports of the MadgwickAHRS and MahonyAHRS sensor fusion algorithms. The original C implementations of MadgwickAHRS and MahonyAHRS can be found [here](http://www.x-io.co.uk/res/sw/madgwick_algorithm_c.zip).
 
+## Screen Shot
+
 ![RawIMU](Documentation/RawIMU.png)
 
 ## Getting Started
 
-RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage). Follow the [Carthage build instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for building for iOS.
+RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage). Follow the [Carthage build instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for using Carthage.
 
 #### Clone RawIMU
 
