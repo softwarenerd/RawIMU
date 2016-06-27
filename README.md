@@ -16,7 +16,7 @@ RawIMU uses [Carthage dependency manager](https://github.com/Carthage/Carthage).
 
 ## Logging
 
-RawIMU provides detailed logging so you can compare its performance to CoreMotion.
+RawIMU provides detailed logging so you can compare the performance of the MadgwickAHRS and MahonyAHRS sensor fusion algorithms to CoreMotion.
 
 ```
 -------------------------------------------------------------------------
