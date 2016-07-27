@@ -235,15 +235,17 @@ static inline void OnMainThread(dispatch_block_t block)
         // Initialize the CoreMotionTestDriver in Madgwick mode or Mahony mode.
         if ([_segmentedControlMadgwickMahony selectedSegmentIndex] == 0)
         {
-            _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMadgwickSensorFusionWithSampleFrequencyHz:10.0f
+            _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMadgwickSensorFusionWithCoreMotionSamplingFrequencyHz:10
+                                                                                        sensorFusionOversamplingFrequencyHz:100
                                                                                                            beta:0.6045997880780726f];
             [_labelEulerAngles setText:@"Madgwick Euler Angles (deg)"];
         }
         else
         {
-            _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMahonySensorFusionWithSampleFrequencyHz:10.0f
-                                                                                                        twoKp:2.0f * 1.5f
-                                                                                                        twoKi:2.0f * 0.2f];
+            _coreMotionTestDriver = [[CoreMotionTestDriver alloc] initMahonySensorFusionWithCoreMotionSamplingFrequencyHz:10.0f
+                                                                                      sensorFusionOversamplingFrequencyHz:100
+                                                                                                                    twoKp:2.0f * 1.5f
+                                                                                                                    twoKi:2.0f * 0.2f];
             [_labelEulerAngles setText:@"Mahony Euler Angles (deg)"];
         }
         
