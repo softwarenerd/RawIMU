@@ -440,8 +440,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="86" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-VA-jE9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="86" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-VA-jE9">
                                 <rect key="frame" x="144" y="372" width="86" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="87d-Ob-xDq"/>
+                                    <constraint firstAttribute="height" constant="21" id="Dtl-VW-Av9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -465,6 +469,7 @@
                                     <segment title="Madgwick"/>
                                     <segment title="Mahony"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="5Bs-OZ-qHY"/>
@@ -480,6 +485,7 @@
                                     <segment title="OFF"/>
                                     <segment title="ON"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="wuM-0B-KEY"/>
@@ -530,6 +536,7 @@
                             <constraint firstAttribute="trailing" secondItem="UYH-5Z-1Ak" secondAttribute="trailing" constant="20" id="GP1-Af-DVA"/>
                             <constraint firstItem="TRG-sz-2yt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GrL-vb-bNx"/>
                             <constraint firstItem="knN-c7-Lu9" firstAttribute="top" secondItem="TRG-sz-2yt" secondAttribute="bottom" constant="8" id="Gt8-Mz-TOh"/>
+                            <constraint firstItem="ceO-VA-jE9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hhp-5W-K9T"/>
                             <constraint firstItem="hfe-L1-397" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Hrh-8u-rzy"/>
                             <constraint firstItem="Chp-av-Iw1" firstAttribute="top" secondItem="pO3-MV-JjH" secondAttribute="bottom" constant="8" id="IXx-bb-U09"/>
                             <constraint firstItem="Wwb-S9-IpT" firstAttribute="top" secondItem="ZcH-EY-H08" secondAttribute="bottom" constant="8" id="Khc-dg-AgA"/>
@@ -560,6 +567,7 @@
                             <constraint firstItem="T7X-zG-EtC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ciF-PX-R4d"/>
                             <constraint firstItem="I2P-fc-plt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="de8-Zt-gFm"/>
                             <constraint firstItem="JzN-cx-Tzx" firstAttribute="top" secondItem="8dy-F4-yqX" secondAttribute="bottom" constant="8" id="f3C-v1-fUz"/>
+                            <constraint firstItem="ceO-VA-jE9" firstAttribute="top" secondItem="hmk-Ne-0yS" secondAttribute="bottom" constant="8" id="fHZ-vU-dMg"/>
                             <constraint firstItem="HIA-Cl-Ou3" firstAttribute="top" secondItem="aS7-UY-RbN" secondAttribute="bottom" constant="8" id="fe7-Tx-2C0"/>
                             <constraint firstItem="pO3-MV-JjH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hGI-T0-WQb"/>
                             <constraint firstItem="IvN-Tg-7xc" firstAttribute="top" secondItem="5nd-pR-XDs" secondAttribute="bottom" constant="8" id="hMT-QI-uTu"/>
